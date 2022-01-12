@@ -13,7 +13,7 @@ mod semantics {
         Hexadecimal,
         Octal,
         Binary,
-        Radix(u32),
+        //Radix(u32),
     }
 
     impl NumericBase {
@@ -23,7 +23,7 @@ mod semantics {
                 NumericBase::Hexadecimal => 16,
                 NumericBase::Octal => 8,
                 NumericBase::Binary => 2,
-                NumericBase::Radix(r) => *r,
+                //NumericBase::Radix(r) => *r,
             }
         }
     }
