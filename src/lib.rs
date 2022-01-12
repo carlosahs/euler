@@ -40,6 +40,7 @@ mod semantics {
 
     pub struct Digit {
         _token_set: TokenSet,
+        _radix: NumericBase,
         _value: char,
     }
 
@@ -48,6 +49,7 @@ mod semantics {
             if value.is_digit(radix.radix()) {
                 return Some(Digit {
                     _token_set: TokenSet::Number,
+                    _radix: radix,
                     _value: value,
                 });
             }
