@@ -20,7 +20,7 @@ mod semantics {
 
     pub struct Digit {
         _token_set: TokenSet,
-        value: char,
+        _value: char,
     }
 
     impl Digit {
@@ -28,7 +28,7 @@ mod semantics {
             if value.is_digit(10) {
                 return Some(Digit {
                     _token_set: TokenSet::Number,
-                    value,
+                    _value: value,
                 });
             }
 
