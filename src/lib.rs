@@ -16,6 +16,18 @@ mod semantics {
         Radix(usize),
     }
 
+    impl NumericBase {
+        fn radix(&self) -> usize {
+            match self {
+                NumericBase::Decimal => 10,
+                NumericBase::Hexadecimal => 16,
+                NumericBase::Octal => 8,
+                NumericBase::Binary => 2,
+                NumericBase::Radix(r) => *r,
+            }
+        }
+    }
+
     enum TokenSet {
         Number,
         Operator,
