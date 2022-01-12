@@ -15,7 +15,7 @@ mod semantics {
     }
 
     pub trait Number {
-        fn numeric();
+        fn numeric(&self);
     }
 
     pub struct Digit {
