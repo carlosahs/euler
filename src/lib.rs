@@ -14,6 +14,10 @@ mod semantics {
         Invalid,
     }
 
+    pub trait Number {
+        fn numeric();
+    }
+
     pub struct Digit {
         _token_set: TokenSet,
         value: char,
