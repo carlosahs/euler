@@ -8,7 +8,7 @@ mod tests {
 }
 
 mod semantics {
-    enum NumericBase {
+    pub enum NumericBase {
         Decimal,
         Hexadecimal,
         Octal,
@@ -44,8 +44,8 @@ mod semantics {
     }
 
     impl Digit {
-        pub fn new(value: char) -> Option<Digit> {
-            if value.is_digit(10) {
+        pub fn new(value: char, radix: NumericBase) -> Option<Digit> {
+            if value.is_digit(radix.radix()) {
                 return Some(Digit {
                     _token_set: TokenSet::Number,
                     _value: value,
