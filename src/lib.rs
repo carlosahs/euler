@@ -13,11 +13,11 @@ mod semantics {
         Hexadecimal,
         Octal,
         Binary,
-        Radix(usize),
+        Radix(u32),
     }
 
     impl NumericBase {
-        fn radix(&self) -> usize {
+        fn radix(&self) -> u32 {
             match self {
                 NumericBase::Decimal => 10,
                 NumericBase::Hexadecimal => 16,
