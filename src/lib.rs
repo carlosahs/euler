@@ -8,6 +8,14 @@ mod tests {
 }
 
 mod semantics {
+    enum NumericBase {
+        Decimal,
+        Hexadecimal,
+        Octal,
+        Binary,
+        Radix(usize),
+    }
+
     enum TokenSet {
         Number,
         Operator,
