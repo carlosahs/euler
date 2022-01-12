@@ -15,7 +15,20 @@ mod semantics {
     }
 
     pub struct Digit {
-        token_set: TokenSet,
-        valid: char,
+        _token_set: TokenSet,
+        value: char,
+    }
+
+    impl Digit {
+        pub fn new(value: char) -> Option<Digit> {
+            if value.is_digit(10) {
+                return Some(Digit {
+                    _token_set: TokenSet::Number,
+                    value,
+                });
+            }
+
+            None
+        }
     }
 }
