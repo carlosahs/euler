@@ -8,6 +8,11 @@ mod tests {
 }
 
 mod utils {
+    pub enum TokenSet {
+        Number,
+        Operator,
+        Invalid,
+    }
 }
 
 mod semantics {
@@ -31,18 +36,12 @@ mod semantics {
         }
     }
 
-    enum TokenSet {
-        Number,
-        Operator,
-        Invalid,
-    }
-
     // pub trait Number<T> {
     //     fn numeric(&self) -> T;
     // }
 
     pub struct Digit {
-        _token_set: TokenSet,
+        _token_set: crate::utils::TokenSet,
         _radix: NumericBase,
         _value: char,
     }
