@@ -34,9 +34,9 @@ mod semantics {
         Invalid,
     }
 
-    pub trait Number {
-        fn numeric(&self);
-    }
+    // pub trait Number<T> {
+    //     fn numeric(&self) -> T;
+    // }
 
     pub struct Digit {
         _token_set: TokenSet,
@@ -57,4 +57,10 @@ mod semantics {
             None
         }
     }
+
+    // impl Number<u32> for Digit {
+    //     fn numeric(&self) -> u32 {
+    //         self._value.to_digit(self._radix)
+    //     }
+    // }
 }
