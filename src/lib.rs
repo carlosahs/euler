@@ -7,13 +7,7 @@ mod tests {
     }
 }
 
-mod utils {
-    pub enum TokenSet {
-        Number,
-        Operator,
-        Invalid,
-    }
-}
+mod utils {}
 
 mod semantics {
     pub enum NumericBase {
@@ -22,6 +16,12 @@ mod semantics {
         Octal,
         Binary,
         //Radix(u32),
+    }
+
+    pub enum TokenSet {
+        Number,
+        Operator,
+        Invalid,
     }
 
     impl NumericBase {
@@ -41,7 +41,7 @@ mod semantics {
     // }
 
     pub struct Digit {
-        _token_set: crate::utils::TokenSet,
+        _token_set: TokenSet,
         _radix: NumericBase,
         _value: char,
     }
