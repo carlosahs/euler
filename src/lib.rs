@@ -7,6 +7,9 @@ mod tests {
     }
 }
 
+mod utils {
+}
+
 mod semantics {
     pub enum NumericBase {
         Decimal,
